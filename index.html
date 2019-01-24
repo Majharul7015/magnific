@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- css links -->
+   <link rel="stylesheet" href="css/magnific-popup.css">
+   <link rel="stylesheet" href="css/bootstrap.css">
+   <link rel="stylesheet" href="css/style.css">
+
+
+    <title>Magnific popup</title>
+  </head>
+  <body>
+    <!-- single image -->
+    
+      <section class="single">
+        <div class="conatiner">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h1>Single Image PopUp</h1>
+               <a href="images/img1.jpg" class="s_img"><span class="cont_title">Image Popup</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!-- single image -->
+
+
+    <!-- image gellary -->
+    <section class="gellary">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h1> Gallery Image</h1>
+            <div class="gw">
+              <a href="images/img1.jpg" class="g_img"> <span class="cont_title">GEllary Image 1 <br></span></a>
+              <a href="images/img2.jpg" class="g_img"> <span class="cont_title">GEllary Image 2 <br></span></a>
+              <a href="images/img3.jpg" class="g_img"> <span class="cont_title">GEllary Image 3 <br></span></a>
+              <a href="images/img4.jpg" class="g_img"> <span class="cont_title">GEllary Image 4 <br></span></a>
+              <a href="images/img5.jpg" class="g_img"> <span class="cont_title">GEllary Image 5 <br></span></a>
+              <a href="images/img6.jpg" class="g_img"> <span class="cont_title">GEllary Image 6</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+     <!-- image gellary -->
+     <!-- video popup -->
+     <section class="video">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h1>Video PopUp</h1>
+            <a href="https://youtu.be/0sg2pZzS1mE?list=RD0sg2pZzS1mE" class="vidplay"> <span class="cont_title">Play Video</span></a>
+            
+          </div>
+        </div>
+      </div>
+     </section>
+    
+   
+   
+    <!-- js links -->
+      <script src="js/jquery-3.3.1.min.js"></script>
+      <script src="js/jquery.magnific-popup.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script  src="js/script.js"></script>
+      <script>
+        $(document).ready(function() {
+        $('.s_img').magnificPopup({type:'image'});
+        $('.g_img').magnificPopup({
+         type: 'image',
+           gallery:{
+           enabled:true
+         }
+        });
+               $('.vidplay').magnificPopup({
+              type: 'iframe',
+              iframe: {
+  markup: '<div class="mfp-iframe-scaler">'+
+            '<div class="mfp-close"></div>'+
+            '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
+          '</div>',
+
+  patterns: {
+    youtube: {
+      index: 'youtube.com/',
+
+      id: 'v=', 
+
+      src: 'https//www.youtube.com/embed/%id%?autoplay=1' 
+    },
+    vimeo: {
+      index: 'vimeo.com/',
+      id: '/',
+      src: '//player.vimeo.com/video/%id%?autoplay=1'
+    },
+    gmaps: {
+      index: '//maps.google.',
+      src: '%id%&output=embed'
+    }
+
+    // you may add here more sources
+
+  },
+     
+});
+   
+         });
+       </script>
+     
+  </body>
+
+
+</html>
